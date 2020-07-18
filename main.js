@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 drag_img.addEventListener("dragstart", function (event) {
                     //drag(event);
-                e.dataTransfer.setData("image", event.target.id);
+                event.dataTransfer.setData("image", event.target.id);
                 });
 
 
