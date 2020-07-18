@@ -11,4 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.dataTransfer.setData("image", event.target.id);
                 });
 
+                
+                //dragover
+
+                box2.addEventListener("dragover", function (event) {
+                    event.preventDefault();
+                });
+
     });
