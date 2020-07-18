@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
 
-                //drop(event);
-                
+                //drop
                 box2.addEventListener("drop", function (event) {
+                    //drop(event);
                     event.preventDefault();
-                    let data = e.dataTransfer.getData("image");
-                    e.target.appendChild(document.getElementById(data));
+                    let data = event.dataTransfer.getData("image");
+                    event.target.appendChild(document.getElementById(data));
                 });
 
     });
