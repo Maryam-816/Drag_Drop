@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 //dragstart
 
                 drag_img.addEventListener("dragstart", function (event) {
-                    //drag(event);
-                event.dataTransfer.setData("image", event.target.id);
+                    drag(event);
                 });
 
 
@@ -21,10 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 //drop
                 box2.addEventListener("drop", function (event) {
-                    //drop(event);
-                    event.preventDefault();
-                    let data = event.dataTransfer.getData("image");
-                    event.target.appendChild(document.getElementById(data));
+                    drop(event);
                 });
 
     });
+
+    function drag(e) {
+        e.dataTransfer.setData("image", event.target.id);
+    }
+
+    function drop(e) {
+        e.preventDefault();
+        let data = e.dataTransfer.getData("image");
+        e.target.appendChild(document.getElementById(data));
+    }
