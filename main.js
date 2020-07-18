@@ -23,6 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     drop(event);
                 });
 
+
+                //dragover
+
+                box1.addEventListener("dragover", function (event) {
+                    event.preventDefault();
+                });
+                
+                
+                //drop
+                box1.addEventListener("drop", function (event) {
+                    drop(event);
+                });
+
     });
 
     function drag(e) {
